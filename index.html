@@ -27,7 +27,7 @@
 
    }
    .jumbotron {
-    background: url('static/images/music.jpg');
+    background: #CCFFFF;
      background-size:  cover;
      background-position: center 40%;
      height: 300px;
@@ -47,7 +47,7 @@
         <div class="col-xs-12 col-10">
 
           <div calss="form-group">
-            <h3>■ 使い方<br>あなたの気分を書き込んでみて！<br>AIが感情を読み取っておすすめの曲を紹介するよ！<br>（例）今日は飛べそう</h3>
+            <h3>■ 使い方<br>あなたの気分を書き込んでみて！<br>AIが感情を読み取っておすすめの曲を紹介するよ！<br>（例）空も飛べる！</h3>
           </div>
 
 
@@ -97,6 +97,8 @@
           alert('文字を入力してください')
         }
         else{
+            $('#waka1').html("読込中");
+            $('#waka2').html("");
             // add content type header to object
             myHeaders.append("Content-Type", "application/json");
             // using built in JSON utility package turn object to string and store in a variable
@@ -115,7 +117,8 @@
               $('#waka1').html("曲名："+JSON.parse(result).body.song);
               $('#waka2').html("Your Emotion : "+JSON.parse(result).body.YourEmotion);
               }) 
-        $('#modal_box').modal('show'); 
+        setTimeout($('#modal_box').modal('show'), 5);
+        
         }           
       }
 
