@@ -1,6 +1,7 @@
 # 気分にあった音楽レコメンドシステム
 ## 概要
 入力された気分や事象などから感情をAIで読み取り，読み取った感情に応じて音楽をレコメンドするシステム！
+
 [レコメンドページへ](https://master.d13kgn6n4if7g7.amplifyapp.com/)
 
 ## システムの説明
@@ -12,7 +13,7 @@
 ## システムの内容
 * 主にAWSを利用
 * システム構成図
-* ![](https://github.com/kentaro123/search_onepiece_heroku/blob/master/sample_photo/%E6%A4%9C%E7%B4%A2%E7%94%BB%E9%9D%A2.png?raw=true)
+* ![](https://github.com/kentaro123/recomend/blob/master/images/system.png?raw=true)
 
 * AWSの中でもAmplify, API Gateway, Lambda, S3, Comprehendを利用
 * レコメンドの仕組みは，4つの感情それぞれのデータセットを作成し，読み取った感情のデータセットの中からランダムに曲を選択しレコメンドする
