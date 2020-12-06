@@ -23,7 +23,7 @@
     background: #FFF;
     border-color: #FFF;
     color: #000000;
-    margin: 20px 20px 40px;
+    margin: 20px 40px 40px;
 
    }
    .jumbotron {
@@ -40,34 +40,34 @@
     </div>
 
   <body>    <div class="container-fluid text-center">
-    <h1>気分にあった曲をレコメンド</h1>
+    <h1>今日の一曲</h1>
   </div>
         <div class="uk-text container">
         <div class="uk-width-1-1 row">
         <div class="col-xs-12 col-10">
 
           <div calss="form-group">
-            <h3>■ 使い方<br>あなたの気分や出来事を書き込んでみて！<br>AIが感情を読み取っておすすめの曲を紹介するよ！<br>（例）今日はいい買い物ができた，溝に落ちた</h3>
+            <h3>■ 使い方<br>今日の出来事や感情を入力してみて！<br>AIがテキストから感情を読み取って今日の一曲を選択するよ！<br>（例）今日はいい買い物ができた．だがその後溝に落ちた．</h3>
           </div>
 
 
         <div class="form-group">
         <div class="input-group input-group-lg">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-lg">あなたの気分</span>
+            <span class="input-group-text" id="inputGroup-sizing-lg">今日の出来事</span>
           </div>
-          <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" id="fName">
+          <textarea class="form-control"  rows="3", id='fName'></textarea>
         </div>
       </div>
 
-      <button type="button" class="btn btn-primary" onclick="callAPI(document.getElementById('fName').value)">Search</button>
+      <button type="button" class="btn btn-primary" onclick="callAPI(document.getElementById('fName').value)">入力完了</button>
 
 
       <div class="modal" tabindex="-1" role="dialog", id="modal_box">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">おすすめ曲</h5>
+              <h5 class="modal-title">今日の一曲</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
